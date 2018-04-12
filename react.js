@@ -1,9 +1,11 @@
 const commonRules = {
-  'jsx-alignment': true,
-  'jsx-equals-spacing': [true, 'never'],
+  'jsx-alignment': false,
+  'jsx-equals-spacing': false,
   'jsx-key': true,
+  'jsx-no-multiline-js': false,
   'jsx-no-string-ref': true,
-  'jsx-self-close': true
+  'jsx-self-close': true,
+  'jsx-wrap-multiline': false
 };
 
 module.exports = {
@@ -11,6 +13,6 @@ module.exports = {
   jsRules: commonRules,
   rules: {
     ...commonRules,
-    'jsx-curly-spacing': [true, 'never']
+    'jsx-curly-spacing': false
   }
 };

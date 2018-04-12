@@ -27,21 +27,17 @@ const commonRules = {
   'no-this-assignment': [true, {'allow-destructuring': true}],
   'no-unnecessary-callback-wrapper': true,
   'no-unnecessary-class': true,
-  'number-literal-format': true,
   'object-literal-sort-keys': [true, 'ignore-case'],
   'prefer-conditional-expression': [true, 'check-else-if'],
   'prefer-function-over-method': true,
   'prefer-object-spread': true,
   'prefer-switch': true,
   'prefer-template': [true, 'allow-single-concat'],
-  'quotemark': [true, 'single', 'jsx-single', 'avoid-template'],
-  'space-before-function-paren': [true, 'always'],
-  'trailing-comma': [true, {'multiline': 'never', 'singleline': 'never'}],
   'triple-equals': true
 };
 
 module.exports = {
-  extends: ['tslint:recommended'],
+  extends: ['tslint:recommended', 'tslint-config-prettier'],
   jsRules: commonRules,
   lintOptions: {
     typeCheck: true

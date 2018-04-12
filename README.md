@@ -21,6 +21,20 @@ Create TSLint configuration file (`tslint.json`) that extends `tslint-config-mai
 }
 ```
 
+Create `prettier.config.js` on the root of your project with these contents:
+
+```js
+module.exports = require('tslint-config-mailonline/prettier');
+```
+
+Add the following script command to your `package.json`:
+
+```json
+{
+  "lint": "prettier './**/*.{js,jsx,ts,tsx}' --write && tslint './src/**/*.{js,jsx,ts,tsx}'"
+}
+```
+
 ## Extended configs
 
 The package also has separate entry points for some environments. Simply extend from the entry point as described below

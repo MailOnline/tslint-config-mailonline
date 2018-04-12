@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "lint": "tslint './*.js'",
-    "precommit": "npm run lint",
+    "check-prettier-conflicts": "tslint-config-prettier-check './index.js' && tslint-config-prettier-check './react.js'",
+    "precommit": "npm run lint && npm run check-prettier-conflicts",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "echo 'This project has no tests' && exit 0"
   },
@@ -32,6 +33,7 @@
     "typescript": "^2.8.1"
   },
   "dependencies": {
+    "tslint-config-prettier": "^1.10.0",
     "tslint-react": "^3.5.1"
   }
 }
