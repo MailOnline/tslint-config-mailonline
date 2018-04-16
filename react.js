@@ -1,3 +1,4 @@
+/* tslint:disable:prefer-object-spread */
 const commonRules = {
   'jsx-alignment': false,
   'jsx-equals-spacing': false,
@@ -11,8 +12,11 @@ const commonRules = {
 module.exports = {
   extends: ['tslint-react'],
   jsRules: commonRules,
-  rules: {
-    ...commonRules,
-    'jsx-curly-spacing': false
-  }
+  rules: Object.assign(
+    {},
+    commonRules,
+    {
+      'jsx-curly-spacing': false
+    }
+  )
 };

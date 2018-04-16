@@ -1,3 +1,4 @@
+/* tslint:disable:prefer-object-spread */
 const commonRules = {
   'ban': [
     true,
@@ -55,16 +56,19 @@ module.exports = {
       'dev'
     ]
   },
-  rules: {
-    ...commonRules,
-    'await-promise': true,
-    'interface-name': [true, 'never-prefix'],
-    'no-any': true,
-    'no-floating-promises': true,
-    'no-inferrable-types': false,
-    'no-non-null-assertion': true,
-    'no-unused-variable': true,
-    'promise-function-async': true,
-    'restrict-plus-operands': true
-  }
+  rules: Object.assign(
+    {},
+    commonRules,
+    {
+      'await-promise': true,
+      'interface-name': [true, 'never-prefix'],
+      'no-any': true,
+      'no-floating-promises': true,
+      'no-inferrable-types': false,
+      'no-non-null-assertion': true,
+      'no-unused-variable': true,
+      'promise-function-async': true,
+      'restrict-plus-operands': true
+    }
+  )
 };
