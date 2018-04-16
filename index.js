@@ -15,7 +15,7 @@ const commonRules = {
   'no-dynamic-delete': true,
   'no-empty': false,
   'no-implicit-dependencies': [true, 'dev'],
-  'no-import-side-effect': true,
+  'no-import-side-effect': [true, {"ignore-module": "\\.css$"}],
   'no-invalid-template-strings': true,
   'no-invalid-this': true,
   'no-magic-numbers': true,
