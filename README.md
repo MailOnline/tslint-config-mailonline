@@ -7,10 +7,10 @@ MailOnline TSLint configuration.
 
 ## Usage
 
-Add `tslint-config-mailonline`, `tslint`, and `typescript` as development dependencies:
+Add `tslint-config-mailonline`, `tslint`, `typescript`, and `prettier` as development dependencies:
 
 ```bash
-yarn add --dev tslint-config-mailonline tslint typescript
+yarn add --dev tslint-config-mailonline tslint typescript prettier
 ```
 
 Create TSLint configuration file (`tslint.json`) that extends `tslint-config-mailonline`:
@@ -31,7 +31,9 @@ Add the following script command to your `package.json`:
 
 ```json
 {
-  "lint": "prettier './**/*.{js,jsx,ts,tsx}' --write && tslint './src/**/*.{js,jsx,ts,tsx}'"
+  "lint:prettier": "prettier --ignore-path .gitignore --write './**/*.{js,jsx,ts,tsx}'",
+  "lint:tslint": "tslint './**/*.{js,jsx,ts,tsx}' -t verbose",
+  "lint": "yarn run lint:prettier && yarn run lint:tslint"
 }
 ```
 
