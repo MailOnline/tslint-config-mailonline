@@ -45,6 +45,7 @@ module.exports = {
   rules: {
     ...commonRules,
     'await-promise': true,
+    'interface-name': [true, 'never-prefix'],
     'no-any': true,
     'no-floating-promises': true,
     'no-inferrable-types': false,
