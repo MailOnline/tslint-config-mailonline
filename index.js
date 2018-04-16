@@ -15,10 +15,10 @@ const commonRules = {
   'no-dynamic-delete': true,
   'no-empty': false,
   'no-implicit-dependencies': [true, 'dev'],
-  'no-import-side-effect': [true, {"ignore-module": "\\.css$"}],
+  'no-import-side-effect': [true, {'ignore-module': '\\.css$'}],
   'no-invalid-template-strings': true,
   'no-invalid-this': true,
-  'no-magic-numbers': true,
+  'no-magic-numbers': false,
   'no-parameter-reassignment': true,
   'no-require-imports': true,
   'no-return-await': true,
@@ -28,6 +28,14 @@ const commonRules = {
   'no-unnecessary-callback-wrapper': true,
   'no-unnecessary-class': true,
   'object-literal-sort-keys': [true, 'ignore-case'],
+  'ordered-imports': [
+    true,
+    {
+      'grouped-imports': true,
+      'import-sources-order': 'any',
+      'named-imports-order': 'any'
+    }
+  ],
   'prefer-conditional-expression': [true, 'check-else-if'],
   'prefer-function-over-method': true,
   'prefer-object-spread': true,
@@ -39,8 +47,13 @@ const commonRules = {
 module.exports = {
   extends: ['tslint:recommended', 'tslint-config-prettier'],
   jsRules: commonRules,
-  lintOptions: {
-    typeCheck: true
+  linterOptions: {
+    exclude: [
+      'node_modules',
+      'dist',
+      'coverage',
+      'dev'
+    ]
   },
   rules: {
     ...commonRules,
