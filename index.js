@@ -64,7 +64,7 @@ module.exports = {
       'interface-name': [true, 'never-prefix'],
       'no-any': true,
       'no-floating-promises': true,
-      'no-inferrable-types': false,
+      'no-inferrable-types': true,
       'no-non-null-assertion': true,
       'no-unused-variable': true,
       'promise-function-async': true,
