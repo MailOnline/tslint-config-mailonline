@@ -20,7 +20,7 @@
     "lint": "tslint './*.js'",
     "check-prettier-conflicts": "tslint-config-prettier-check './index.js' && tslint-config-prettier-check './react.js'",
     "precommit": "yarn lint && yarn check-prettier-conflicts",
-    "semantic-release": "semantic-release",
+    "release": "semantic-release",
     "test": "echo 'This project has no tests' && exit 0"
   },
   "devDependencies": {
