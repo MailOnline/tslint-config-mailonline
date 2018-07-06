@@ -1,30 +1,30 @@
-# `tslint-config-mailonline`
+# `tslint` Config
 
 [![NPM version](http://img.shields.io/npm/v/tslint-config-mailonline.svg?style=flat-square)](https://www.npmjs.org/package/tslint-config-mailonline)
 [![Travis build status](http://img.shields.io/travis/MailOnline/tslint-config-mailonline/master.svg?style=flat-square)](https://travis-ci.org/MailOnline/tslint-config-mailonline)
 
-MailOnline TSLint configuration.
+ThreadsStyling TSLint configuration.
 
 ## Usage
 
-Add `tslint-config-mailonline`, `tslint`, `typescript`, and `prettier` as development dependencies:
+Add `@threads/tslint`, `tslint`, `typescript`, and `prettier` as development dependencies:
 
 ```bash
-yarn add --dev tslint-config-mailonline tslint typescript prettier
+yarn add --dev @threads/tslint tslint typescript prettier
 ```
 
-Create TSLint configuration file (`tslint.json`) that extends `tslint-config-mailonline`:
+Create TSLint configuration file (`tslint.json`) that extends `@threads/tslint`:
 
 ```json
 {
-  "extends": "tslint-config-mailonline"
+  "extends": "@threads/tslint"
 }
 ```
 
 Create `prettier.config.js` on the root of your project with these contents:
 
 ```js
-module.exports = require('tslint-config-mailonline/prettier');
+module.exports = require('@threads/tslint/prettier');
 ```
 
 Add the following script command to your `package.json`:
@@ -33,7 +33,7 @@ Add the following script command to your `package.json`:
 {
   "lint:prettier": "prettier --ignore-path .gitignore --write './**/*.{js,jsx,ts,tsx}'",
   "lint:tslint": "tslint './**/*.{js,jsx,ts,tsx}' -t verbose",
-  "lint": "yarn run lint:prettier && yarn run lint:tslint"
+  "lint": "yarn lint:prettier && yarn lint:tslint"
 }
 ```
 
@@ -44,17 +44,17 @@ The package also has separate entry points for some environments. Simply extend 
 ```json
 {
   "extends": [
-    "tslint-config-mailonline",
-    "tslint-config-mailonline/react"
+    "@threads/tslint",
+    "@threads/tslint/react"
   ]
 }
 ```
 
-### react
+### React
 
 ```json
 {
-  "extends": "tslint-config-mailonline/react"
+  "extends": "@threads/tslint/react"
 }
 ```
 
