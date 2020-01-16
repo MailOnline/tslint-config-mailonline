@@ -66,7 +66,6 @@ module.exports = {
       'no-floating-promises': true,
       'no-inferrable-types': true,
       'no-non-null-assertion': true,
-      'no-unused-variable': true,
       'promise-function-async': true,
       'restrict-plus-operands': true
     }
