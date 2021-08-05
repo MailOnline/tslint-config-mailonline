@@ -1,0 +1,27 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - semantic-release > @semantic-release/github > https-proxy-agent:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/npm > npm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/npm > npm > npm-profile > make-fetch-happen > https-proxy-agent:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/npm > npm > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/npm > npm > libcipm > pacote > make-fetch-happen > https-proxy-agent:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/npm > npm > libnpmhook > npm-registry-fetch > make-fetch-happen > https-proxy-agent:
+        patched: '2021-08-05T08:25:17.606Z'
+  SNYK-JS-LODASH-567746:
+    - semantic-release > lodash:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/release-notes-generator > lodash:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/release-notes-generator > conventional-commits-parser > lodash:
+        patched: '2021-08-05T08:25:17.606Z'
+    - semantic-release > @semantic-release/release-notes-generator > conventional-changelog-writer > lodash:
+        patched: '2021-08-05T08:25:17.606Z'
